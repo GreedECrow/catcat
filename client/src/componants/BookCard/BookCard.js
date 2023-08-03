@@ -2,9 +2,9 @@ import React from "react";
 import "./BookCard.css";
 import Form from '../Form/Form';
 
-export default function BookCard({book, handleDelete, HandleBook}) {
+export default function BookCard({book, handleDelete, HandleUpdateBook}) {
 
-    return(
+    return (
         <div>
             {book.map(book => {
                 return (
@@ -16,7 +16,7 @@ export default function BookCard({book, handleDelete, HandleBook}) {
                             <p>{book.description}, {book.status}</p>
                         </div>
                     <Form onSubmitFunc={handleUpdateBook} book={book}/>
-                <div />
+                </div>
                 )
             })}
         </div>
